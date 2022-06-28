@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-const defaultBackgroundColor = Color(0Xff667276);
+const defaultBackgroundColor = Color.fromARGB(255, 54, 58, 59);
 
 class BMI extends StatefulWidget {
   const BMI({Key? key}) : super(key: key);
@@ -26,6 +27,20 @@ class BMIState extends State<BMI> {
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              FontAwesomeIcons.mars,
+                              size: 60,
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              'Male',
+                              style: TextStyle(fontSize: 18),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -36,13 +51,27 @@ class BMIState extends State<BMI> {
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              FontAwesomeIcons.venus,
+                              size: 60,
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              'Female',
+                              style: TextStyle(fontSize: 18),
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 15,
               ),
               Expanded(
                 child: Container(
@@ -51,7 +80,7 @@ class BMIState extends State<BMI> {
                       color: defaultBackgroundColor,
                     )),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               Expanded(
                 child: Row(
                   children: [
