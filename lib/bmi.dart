@@ -2,6 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const defaultBackgroundColor = Color.fromARGB(255, 54, 58, 59);
+const textTitleStyle = TextStyle(
+  fontSize: 16,
+  color: Colors.grey,
+);
+
+const numbersTextStyle = TextStyle(
+  fontSize: 40,
+  fontWeight: FontWeight.bold,
+  color: Colors.white,
+);
+
+const subTextStyle = TextStyle(
+  fontSize: 14,
+  color: Colors.grey,
+);
 
 class BMI extends StatefulWidget {
   const BMI({Key? key}) : super(key: key);
@@ -11,6 +26,8 @@ class BMI extends StatefulWidget {
 }
 
 class BMIState extends State<BMI> {
+  int _currentSliderValue = 120;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -76,6 +93,64 @@ class BMIState extends State<BMI> {
               Expanded(
                 child: Container(
                     width: double.infinity,
+                    // child: Align(
+                    //   alignment: Alignment.center,
+                    //   child: Slider(
+                    //     value: _currentSliderValue,
+                    //     min: 0,
+                    //     max: 100,
+                    //     thumbColor: Colors.pink,
+                    //     activeColor: Colors.pink,
+                    //     inactiveColor: Colors.grey,
+                    //     onChanged: (double value) {
+                    //       setState(() {
+                    //         _currentSliderValue = value;
+                    //       });
+                    //     },
+                    //   ),
+
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'WEIGHT',
+                          style: textTitleStyle,
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              _currentSliderValue.toString(),
+                              style: numbersTextStyle,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'cm',
+                              style: subTextStyle,
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Slider(
+                          value: _currentSliderValue.toDouble(),
+                          min: 120,
+                          max: 220,
+                          thumbColor: Colors.pink,
+                          activeColor: Colors.pink,
+                          inactiveColor: Colors.grey,
+                          onChanged: (double value) {
+                            setState(() {
+                              _currentSliderValue = value.round();
+                            });
+                          },
+                        ),
+                      ],
+                    ),
                     decoration: BoxDecoration(
                       color: defaultBackgroundColor,
                     )),
