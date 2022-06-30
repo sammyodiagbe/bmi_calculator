@@ -113,7 +113,7 @@ class BMIState extends State<BMI> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'WEIGHT',
+                          'HEIGHT',
                           style: textTitleStyle,
                         ),
                         SizedBox(height: 10),
@@ -161,6 +161,33 @@ class BMIState extends State<BMI> {
                   children: [
                     Expanded(
                       child: Container(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('HEIGHT'),
+                            SizedBox(height: 10),
+                            Text('20'),
+                            SizedBox(height: 10),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: null,
+                                  style: ElevatedButton.styleFrom(
+                                    shape: CircleBorder(),
+                                    fixedSize: Size(50, 50),
+                                  ),
+                                  child: Icon(Icons.remove),
+                                ),
+                                SizedBox(width: 10),
+                                ElevatedButton(
+                                  onPressed: null,
+                                  child: Icon(Icons.add),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),
