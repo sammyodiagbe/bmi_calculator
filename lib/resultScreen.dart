@@ -7,11 +7,17 @@ class ResultScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Text(
-            'Result Screen',
-            style: resultTextScreenStyle,
-          ),
-        ),
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Your BMI.'),
+            SizedBox(height: 15),
+            Text(
+              '100',
+              style: heightAndAgeTextStyle,
+            ),
+          ],
+        )),
       ),
     );
   }

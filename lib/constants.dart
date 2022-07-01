@@ -26,3 +26,6 @@ const resultTextScreenStyle = TextStyle(
   fontSize: 36,
   // fontWeight: FontWeight.bold,
 );
+
+const heightAndAgeTextStyle =
+    TextStyle(fontSize: 40, fontWeight: FontWeight.bold);
