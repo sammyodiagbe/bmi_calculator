@@ -166,7 +166,9 @@ class BMIState extends State<BMI> {
                     Expanded(
                       child: Container(
                         child: ReusableColumn(
-                            columnTitle: 'HEIGHT', value: 30, action: 1),
+                            columnTitle: 'HEIGHT',
+                            value: brain.getHeight(),
+                            action: 1),
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),
@@ -178,7 +180,9 @@ class BMIState extends State<BMI> {
                     Expanded(
                       child: Container(
                         child: ReusableColumn(
-                            columnTitle: 'AGE', value: 24, action: 2),
+                            columnTitle: 'AGE',
+                            value: brain.getAge(),
+                            action: 2),
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),

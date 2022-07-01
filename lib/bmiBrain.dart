@@ -19,4 +19,12 @@ class BmiBrain {
       _age += 1;
     }
   }
+
+  int getHeight() {
+    return _height;
+  }
+
+  int getAge() {
+    return _age;
+  }
 }
