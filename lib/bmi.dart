@@ -166,8 +166,11 @@ class BMIState extends State<BMI> {
                 top: 15,
               ),
               height: 60,
+              // trigger button
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/result');
+                },
                 child: Text(
                   'CALCULATE BMI.',
                   style: buttonTextStyle,
