@@ -5,10 +5,8 @@ BmiBrain brain = BmiBrain();
 
 class ReusableColumn extends StatefulWidget {
   String columnTitle;
-  int value;
   int action;
-  ReusableColumn(
-      {required this.columnTitle, required this.value, required this.action});
+  ReusableColumn({required this.columnTitle, required this.action});
 
   @override
   State<ReusableColumn> createState() => _ReusableColumnState();
@@ -22,7 +20,9 @@ class _ReusableColumnState extends State<ReusableColumn> {
       children: [
         Text(widget.columnTitle),
         SizedBox(height: 10),
-        Text(widget.value.toString()),
+        Text(widget.action == 1
+            ? brain.getHeight().toString()
+            : brain.getAge().toString()),
         SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
