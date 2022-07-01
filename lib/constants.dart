@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 const defaultBackgroundColor = Color.fromARGB(255, 54, 58, 59);
+
+const defaultTitleTextStyle = TextStyle(fontSize: 24);
 const textTitleStyle = TextStyle(
   fontSize: 16,
   color: Colors.grey,
