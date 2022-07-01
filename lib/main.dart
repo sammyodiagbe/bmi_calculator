@@ -10,7 +10,11 @@ class BmiApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark().copyWith(
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.pink),
+      ))),
       home: const BMI(),
     );
   }
