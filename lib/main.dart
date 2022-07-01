@@ -1,5 +1,4 @@
 import 'package:bmi_calculator/bmi.dart';
-import 'package:bmi_calculator/resultScreen.dart';
 import "package:flutter/material.dart";
 
 void main() {
@@ -11,7 +10,6 @@ class BmiApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // initialRoute: '/',
       theme: ThemeData.dark().copyWith(
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
@@ -24,10 +22,9 @@ class BmiApp extends StatelessWidget {
             trackHeight: 4,
             inactiveTrackColor: Colors.grey),
       ),
-      // routes: {
-      //   '/': (context) => BmiApp(),
-      //   '/result': (context) => ResultScreen()
-      // },
+      routes: {
+        '/': (context) => BMI(),
+      },
     );
   }
 }
