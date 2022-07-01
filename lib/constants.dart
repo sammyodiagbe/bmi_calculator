@@ -28,4 +28,4 @@ const resultTextScreenStyle = TextStyle(
 );
 
 const heightAndAgeTextStyle =
-    TextStyle(fontSize: 40, fontWeight: FontWeight.bold);
+    TextStyle(fontSize: 60, fontWeight: FontWeight.bold);
