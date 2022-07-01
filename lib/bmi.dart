@@ -1,5 +1,9 @@
+import 'package:bmi_calculator/bmiBrain.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import "reusableColumn.dart";
+
+BmiBrain brain = BmiBrain();
 
 const defaultBackgroundColor = Color.fromARGB(255, 54, 58, 59);
 const textTitleStyle = TextStyle(
@@ -161,7 +165,8 @@ class BMIState extends State<BMI> {
                   children: [
                     Expanded(
                       child: Container(
-                        child: ReusableColumn(columnTitle: 'HEIGHT', value: 30),
+                        child: ReusableColumn(
+                            columnTitle: 'HEIGHT', value: 30, action: 1),
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),
@@ -173,9 +178,7 @@ class BMIState extends State<BMI> {
                     Expanded(
                       child: Container(
                         child: ReusableColumn(
-                          columnTitle: 'AGE',
-                          value: 24,
-                        ),
+                            columnTitle: 'AGE', value: 24, action: 2),
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),
@@ -188,47 +191,6 @@ class BMIState extends State<BMI> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class ReusableColumn extends StatelessWidget {
-  String columnTitle;
-  int value;
-  ReusableColumn({required this.columnTitle, required this.value});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(columnTitle),
-        SizedBox(height: 10),
-        Text(value.toString()),
-        SizedBox(height: 10),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: null,
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                fixedSize: Size(50, 50),
-              ),
-              child: Icon(Icons.remove),
-            ),
-            SizedBox(width: 10),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                fixedSize: Size(50, 50),
-              ),
-              onPressed: null,
-              child: Icon(Icons.add),
-            ),
-          ],
-        )
-      ],
     );
   }
 }
