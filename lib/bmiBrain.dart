@@ -4,7 +4,9 @@ class BmiBrain {
   int _height = 120;
   int _age = 24;
   int _weight = 50;
-  double? _bmi;
+  double _bmi = 0;
+  String _feedback = 'Normal';
+  String _status = 'Normal';
 
   void performActionOnHeight(int actionId) {
     print(actionId);
@@ -38,11 +40,34 @@ class BmiBrain {
     return _weight;
   }
 
-  void setHeight(int weight) {
-    _weight = weight;
+  void setHeight(int height) {
+    _height = height;
   }
 
   void calculateBMI() {
     _bmi = _weight / pow(_height / 100, 2);
+    if (_bmi >= 25) {
+      _feedback =
+          'You have a higher than normal body weight. Try to exercise more';
+      _status = 'Overweight';
+    } else if (_bmi > 18.5) {
+      _feedback = 'Normal';
+      _status = 'Normal';
+    } else {
+      _feedback = 'You have a lesser than normal body weight. Try to eat more';
+      _status = 'Underweight';
+    }
+  }
+
+  String getStatus() {
+    return _status;
+  }
+
+  String getFeedback() {
+    return _feedback;
+  }
+
+  String getBMI() {
+    return _bmi.toStringAsFixed(1);
   }
 }

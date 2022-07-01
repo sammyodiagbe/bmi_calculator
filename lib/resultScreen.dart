@@ -1,5 +1,8 @@
+import 'package:bmi_calculator/bmiBrain.dart';
 import 'package:bmi_calculator/constants.dart';
 import "package:flutter/material.dart";
+
+BmiBrain brain = BmiBrain();
 
 class ResultScreen extends StatelessWidget {
   @override
@@ -12,7 +15,7 @@ class ResultScreen extends StatelessWidget {
             child: Container(
           padding: EdgeInsets.all(15),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
                 'Your result',
@@ -27,15 +30,15 @@ class ResultScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'Overweight'.toUpperCase(),
+                        brain.getStatus().toUpperCase(),
                         style: weightTextStyle,
                       ),
                       Text(
-                        '25',
+                        brain.getBMI(),
                         style: resultTextScreenStyle,
                       ),
                       Text(
-                        'You have a higher than normal body weight. Try to excercise more.',
+                        brain.getFeedback(),
                         style: feedbackTextStyle,
                         textAlign: TextAlign.center,
                       )

@@ -169,7 +169,10 @@ class BMIState extends State<BMI> {
               // trigger button
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/result');
+                  setState(() {
+                    brain.calculateBMI();
+                    Navigator.of(context).pushNamed('/result');
+                  });
                 },
                 child: Text(
                   'CALCULATE BMI.',
