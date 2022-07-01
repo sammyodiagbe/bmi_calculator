@@ -136,7 +136,7 @@ class BMIState extends State<BMI> {
                           Expanded(
                             child: Container(
                               child: ReusableColumn(
-                                  columnTitle: 'HEIGHT', action: 1),
+                                  columnTitle: 'WEIGHT', action: 1),
                               decoration: BoxDecoration(
                                 color: defaultBackgroundColor,
                               ),
