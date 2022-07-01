@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/constants.dart';
 import "package:flutter/material.dart";
 
 class ResultScreen extends StatelessWidget {
@@ -6,7 +7,10 @@ class ResultScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Text('Result Screen'),
+          child: Text(
+            'Result Screen',
+            style: resultTextScreenStyle,
+          ),
         ),
       ),
     );

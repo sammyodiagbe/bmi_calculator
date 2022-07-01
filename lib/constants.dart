@@ -21,3 +21,8 @@ const buttonTextStyle = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.bold,
 );
+
+const resultTextScreenStyle = TextStyle(
+  fontSize: 36,
+  // fontWeight: FontWeight.bold,
+);
