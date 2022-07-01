@@ -161,33 +161,7 @@ class BMIState extends State<BMI> {
                   children: [
                     Expanded(
                       child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('HEIGHT'),
-                            SizedBox(height: 10),
-                            Text('20'),
-                            SizedBox(height: 10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                ElevatedButton(
-                                  onPressed: null,
-                                  style: ElevatedButton.styleFrom(
-                                    shape: CircleBorder(),
-                                    fixedSize: Size(50, 50),
-                                  ),
-                                  child: Icon(Icons.remove),
-                                ),
-                                SizedBox(width: 10),
-                                ElevatedButton(
-                                  onPressed: null,
-                                  child: Icon(Icons.add),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
+                        child: ReusableColumn(columnTitle: 'HEIGHT', value: 30),
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),
@@ -210,6 +184,43 @@ class BMIState extends State<BMI> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class ReusableColumn extends StatelessWidget {
+  String columnTitle;
+  int value;
+  ReusableColumn({required this.columnTitle, required this.value});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(columnTitle),
+        SizedBox(height: 10),
+        Text(value.toString()),
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: null,
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                fixedSize: Size(50, 50),
+              ),
+              child: Icon(Icons.remove),
+            ),
+            SizedBox(width: 10),
+            ElevatedButton(
+              onPressed: null,
+              child: Icon(Icons.add),
+            ),
+          ],
+        )
+      ],
     );
   }
 }
