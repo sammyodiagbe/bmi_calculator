@@ -116,9 +116,6 @@ class BMIState extends State<BMI> {
                               value: _currentSliderValue.toDouble(),
                               min: 120,
                               max: 220,
-                              thumbColor: Colors.pink,
-                              activeColor: Colors.pink,
-                              inactiveColor: Colors.grey,
                               onChanged: (double value) {
                                 setState(() {
                                   _currentSliderValue = value.round();

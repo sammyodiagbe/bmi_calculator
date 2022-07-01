@@ -11,10 +11,17 @@ class BmiApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-          elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.pink),
-      ))),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.pink),
+          ),
+        ),
+        sliderTheme: SliderThemeData(
+            thumbColor: Colors.pink,
+            activeTrackColor: Colors.pink,
+            trackHeight: 4,
+            inactiveTrackColor: Colors.grey),
+      ),
       home: const BMI(),
     );
   }
