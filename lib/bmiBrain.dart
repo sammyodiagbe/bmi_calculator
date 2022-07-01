@@ -1,6 +1,10 @@
+import 'dart:math';
+
 class BmiBrain {
-  int _height = 50;
+  int _height = 120;
   int _age = 24;
+  int _weight = 50;
+  double? _bmi;
 
   void performActionOnHeight(int actionId) {
     print(actionId);
@@ -28,5 +32,17 @@ class BmiBrain {
 
   int getAge() {
     return _age;
+  }
+
+  int getWeight() {
+    return _weight;
+  }
+
+  void setHeight(int weight) {
+    _weight = weight;
+  }
+
+  void calculateBMI() {
+    _bmi = _weight / pow(_height / 100, 2);
   }
 }

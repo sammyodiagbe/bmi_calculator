@@ -55,7 +55,9 @@ class ResultScreen extends StatelessWidget {
         Container(
           height: 60,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             child: Text(
               'Re-calculate',
               style: buttonTextStyle,

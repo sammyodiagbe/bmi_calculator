@@ -97,7 +97,7 @@ class BMIState extends State<BMI> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  _currentSliderValue.toString(),
+                                  brain.getHeight().toString(),
                                   style: numbersTextStyle,
                                 ),
                                 SizedBox(
@@ -113,12 +113,12 @@ class BMIState extends State<BMI> {
                               height: 10,
                             ),
                             Slider(
-                              value: _currentSliderValue.toDouble(),
+                              value: brain.getHeight().toDouble(),
                               min: 120,
                               max: 220,
                               onChanged: (double value) {
                                 setState(() {
-                                  _currentSliderValue = value.round();
+                                  brain.setHeight(value.round());
                                 });
                               },
                             ),

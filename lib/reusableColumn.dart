@@ -21,7 +21,7 @@ class _ReusableColumnState extends State<ReusableColumn> {
         Text(widget.columnTitle),
         SizedBox(height: 10),
         Text(widget.action == 1
-            ? brain.getHeight().toString()
+            ? brain.getWeight().toString()
             : brain.getAge().toString()),
         SizedBox(height: 10),
         Row(
