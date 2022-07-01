@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 
 const defaultBackgroundColor = Color.fromARGB(255, 54, 58, 59);
 
-const defaultTitleTextStyle = TextStyle(fontSize: 24);
+const defaultTitleTextStyle = TextStyle(
+  fontSize: 24,
+);
 const textTitleStyle = TextStyle(
   fontSize: 16,
   color: Colors.grey,
 );
 
+const weightTextStyle = TextStyle(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  color: Colors.green,
+);
 const numbersTextStyle = TextStyle(
   fontSize: 40,
   fontWeight: FontWeight.bold,
@@ -25,8 +32,12 @@ const buttonTextStyle = TextStyle(
 );
 
 const resultTextScreenStyle = TextStyle(
-  fontSize: 36,
+  fontSize: 60,
   // fontWeight: FontWeight.bold,
+);
+
+const feedbackTextStyle = TextStyle(
+  fontSize: 20,
 );
 
 const heightAndAgeTextStyle =

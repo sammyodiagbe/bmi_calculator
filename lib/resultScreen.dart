@@ -12,7 +12,7 @@ class ResultScreen extends StatelessWidget {
             child: Container(
           padding: EdgeInsets.all(15),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Your result',
@@ -21,6 +21,27 @@ class ResultScreen extends StatelessWidget {
               SizedBox(height: 15),
               Expanded(
                 child: Container(
+                  padding: EdgeInsets.all(15),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Overweight'.toUpperCase(),
+                        style: weightTextStyle,
+                      ),
+                      Text(
+                        '25',
+                        style: resultTextScreenStyle,
+                      ),
+                      Text(
+                        'You have a higher than normal body weight. Try to excercise more.',
+                        style: feedbackTextStyle,
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
+                  margin: EdgeInsets.symmetric(vertical: 30),
                   decoration: BoxDecoration(
                       color: defaultBackgroundColor,
                       borderRadius: BorderRadius.circular(15)),
