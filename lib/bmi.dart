@@ -172,6 +172,10 @@ class BMIState extends State<BMI> {
                     ),
                     Expanded(
                       child: Container(
+                        child: ReusableColumn(
+                          columnTitle: 'AGE',
+                          value: 24,
+                        ),
                         decoration: BoxDecoration(
                           color: defaultBackgroundColor,
                         ),
@@ -215,6 +219,10 @@ class ReusableColumn extends StatelessWidget {
             ),
             SizedBox(width: 10),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                fixedSize: Size(50, 50),
+              ),
               onPressed: null,
               child: Icon(Icons.add),
             ),
