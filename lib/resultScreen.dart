@@ -43,8 +43,9 @@ class ResultScreen extends StatelessWidget {
                         style: resultTextScreenStyle,
                       ),
                       Text(
-                        feedback.toUpperCase(),
+                        feedback,
                         textAlign: TextAlign.center,
+                        style: feedbackTextStyle,
                       )
                     ],
                   ),
