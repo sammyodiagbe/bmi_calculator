@@ -5,6 +5,11 @@ import "package:flutter/material.dart";
 BmiBrain brain = BmiBrain();
 
 class ResultScreen extends StatelessWidget {
+  final String feedback;
+  final String status;
+  final String bmi;
+  const ResultScreen(
+      {required this.bmi, required this.status, required this.feedback});
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,16 +35,15 @@ class ResultScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        brain.getStatus().toUpperCase(),
+                        status.toUpperCase(),
                         style: weightTextStyle,
                       ),
                       Text(
-                        brain.getBMI(),
+                        bmi,
                         style: resultTextScreenStyle,
                       ),
                       Text(
-                        brain.getFeedback(),
-                        style: feedbackTextStyle,
+                        feedback.toUpperCase(),
                         textAlign: TextAlign.center,
                       )
                     ],

@@ -8,15 +8,13 @@ class BmiBrain {
   String _feedback = 'Normal';
   String _status = 'Normal';
 
-  void performActionOnHeight(int actionId) {
-    print(actionId);
+  void performActionOnWeight(int actionId) {
     if (actionId == 1) {
-      if (_height == 0) return;
-      _height -= 1;
+      if (_weight == 0) return;
+      _weight -= 1;
     } else {
-      _height += 1;
+      _weight += 1;
     }
-    print(_height);
   }
 
   void performActionOnAge(int actionId) {

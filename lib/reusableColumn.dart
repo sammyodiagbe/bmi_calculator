@@ -31,7 +31,7 @@ class _ReusableColumnState extends State<ReusableColumn> {
               onPressed: () {
                 setState(() {
                   if (widget.action == 1) {
-                    brain.performActionOnHeight(1);
+                    brain.performActionOnWeight(1);
                   } else {
                     brain.performActionOnAge(1);
                   }
@@ -52,7 +52,7 @@ class _ReusableColumnState extends State<ReusableColumn> {
               onPressed: () {
                 setState(() {
                   if (widget.action == 1) {
-                    brain.performActionOnHeight(2);
+                    brain.performActionOnWeight(2);
                   } else {
                     brain.performActionOnAge(2);
                   }

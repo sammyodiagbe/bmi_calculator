@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/bmiBrain.dart';
+import 'package:bmi_calculator/resultScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import "reusableColumn.dart";
@@ -171,7 +172,16 @@ class BMIState extends State<BMI> {
                 onPressed: () {
                   setState(() {
                     brain.calculateBMI();
-                    Navigator.of(context).pushNamed('/result');
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ResultScreen(
+                            bmi: brain.getBMI(),
+                            status: brain.getStatus(),
+                            feedback: brain.getFeedback(),
+                          ),
+                        ));
                   });
                 },
                 child: Text(
