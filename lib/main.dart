@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:bmi_calculator/bmi.dart';
 import 'package:bmi_calculator/resultScreen.dart';
 import "package:flutter/material.dart";
