@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/constants.dart';
 import "package:flutter/material.dart";
 import "bmiBrain.dart";
 
@@ -20,9 +21,12 @@ class _ReusableColumnState extends State<ReusableColumn> {
       children: [
         Text(widget.columnTitle),
         SizedBox(height: 10),
-        Text(widget.action == 1
-            ? brain.getWeight().toString()
-            : brain.getAge().toString()),
+        Text(
+          widget.action == 1
+              ? brain.getWeight().toString()
+              : brain.getAge().toString(),
+          style: weightAndAgeTextStyle,
+        ),
         SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -42,3 +42,6 @@ const feedbackTextStyle = TextStyle(
 
 const heightAndAgeTextStyle =
     TextStyle(fontSize: 60, fontWeight: FontWeight.bold);
+
+const weightAndAgeTextStyle =
+    TextStyle(fontSize: 36, fontWeight: FontWeight.bold);
