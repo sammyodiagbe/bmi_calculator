@@ -4,13 +4,13 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Learnt a lot from coding out this project
+learnt how to structure your app UI
+learnt how to navigate between screens
+learnt how to break your code into chunks, so as not to have so many files with long codes
 
-A few resources to get you started if this is your first Flutter project:
+### It was fun
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Bmi calculator app](./bmi_cal.PNG)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# day 32
