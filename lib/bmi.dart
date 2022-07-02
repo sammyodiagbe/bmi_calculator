@@ -33,23 +33,32 @@ class BMIState extends State<BMI> {
                       child: Row(
                         children: [
                           Expanded(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: defaultBackgroundColor,
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    FontAwesomeIcons.mars,
-                                    size: 60,
-                                  ),
-                                  SizedBox(height: 10),
-                                  Text(
-                                    'Male',
-                                    style: TextStyle(fontSize: 18),
-                                  )
-                                ],
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  brain.setGender(1);
+                                });
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: brain.getGender() == 1
+                                      ? kSelectedColor
+                                      : defaultBackgroundColor,
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      FontAwesomeIcons.mars,
+                                      size: 60,
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'Male',
+                                      style: TextStyle(fontSize: 18),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -57,23 +66,32 @@ class BMIState extends State<BMI> {
                             width: 10,
                           ),
                           Expanded(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: defaultBackgroundColor,
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    FontAwesomeIcons.venus,
-                                    size: 60,
-                                  ),
-                                  SizedBox(height: 10),
-                                  Text(
-                                    'Female',
-                                    style: TextStyle(fontSize: 18),
-                                  )
-                                ],
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  brain.setGender(2);
+                                });
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: brain.getGender() == 2
+                                      ? kSelectedColor
+                                      : defaultBackgroundColor,
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      FontAwesomeIcons.venus,
+                                      size: 60,
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      'Female',
+                                      style: TextStyle(fontSize: 18),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           )

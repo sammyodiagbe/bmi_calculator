@@ -7,6 +7,15 @@ class BmiBrain {
   double _bmi = 0;
   String _feedback = 'Normal';
   String _status = 'Normal';
+  int _gender = 1;
+
+  void setGender(int genderId) {
+    _gender = genderId;
+  }
+
+  int getGender() {
+    return _gender;
+  }
 
   void performActionOnWeight(int actionId) {
     if (actionId == 1) {
